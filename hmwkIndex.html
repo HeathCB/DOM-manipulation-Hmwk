@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    </head>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="hmwkindex.html">Heath's Homework</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="hmwkindex.html">Home</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div>
+    
+    <body class="container">
+        
+        <br>
+
+        <div class="Card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="new-contact-title">Contact Info</label>
+                            <input type="text" class="form-control" id="new-contact-name" placeholder="Enter Name">
+                            <input type="text" class="form-control" id="new-contact-address" placeholder="Enter Address">
+                            <input type="text" class="form-control" id="new-contact-email" placeholder="Enter Email">
+                        </div>
+                    </div>
+                        <button id="new-contact" class="btn btn-primary form-control">Create</button>
+                </div>
+            </div>
+            <br>
+
+            <div id ="contacts"></div>
+        </div> 
+        
+        <script src="hmwkindex.js"></script>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
