@@ -67,7 +67,7 @@ function createDeleteRowButton( contact ) {
     btn.onclick = () => {
         let index = contacts.indexOf( contact );
         contacts.splice( index, 1 );
-        drawDOM();
+        //drawDOM();
     }
     return btn;
 }
@@ -78,7 +78,7 @@ function createNeweContactButton( contact ) {
     btn.innerHTML = "Create";
     btn.onClick = () => {
         contacts.push( new Contact( getValue( `name-input- ${contact.id}`, getValue( `address-input- ${contact.id}`, getValue( `email-input- ${contact.id}`) ) ) ) );
-        drawDOM();
+        //drawDOM();
     };
     return btn;
 }
@@ -91,7 +91,7 @@ function createContactRow( contact, table ) {
 
     let actions = row.insertCell( 3 );
     actions.appendChild( createDeleteRowButton( contact ) );
-}
+} 
 
 function createContactTable( contact ) {
     let table = document.createElement( "table" );
@@ -116,28 +116,9 @@ function createContactTable( contact ) {
     let createTh = document.createElement( "th" );
     let deleteTh = document.createElement( "th" );
     
-    /*let nameInput = document.createElement( "input" );
-    nameInput.setAttribute( "id", `name-input- ${contact.id}` );
-    nameInput.setAttribute( "type", "text" );
-    nameInput.setAttribute( "class", "form-control" );
-    let adressInput = document.createElement( "input" );
-    adressInput.setAttribute( "id", `address-input- ${contact.id}` )
-    adressInput.setAttribute( "type", "text" );
-    adressInput.setAttribute( "class", "form-control" );
-    let emailInput = document.createElement( "input" );
-    emailInput.setAttribute( "id", `email-input- ${contact.id}` );
-    emailInput.setAttribute( "type", "text" );
-    emailInput.setAttribute( "class", "form-control" );
-    let newContactButton = createNeweContactButton( contact );
-    nameTh.appendChild( nameInput );
-    addressTh.appendChild( adressInput );
-    emailTh.appendChild( emailInput );
-    createTh.appendChild( newContactButton );
-    */
     formRow.appendChild( nameTh );
     formRow.appendChild( addressTh );
     formRow.appendChild( emailTh );
     formRow.appendChild( deleteTh );
-    //formRow.appendChild( createTh );
     return table;
 }
