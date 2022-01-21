@@ -45,14 +45,14 @@ function clearElement( element ) {
 function drawDOM(){
     let contactDiv= document.getElementById( "contacts" );
     clearElement( contactDiv );
-    for( contact of contacts ) {
+    for( const contact of contacts ) {
         let table = createContactTable( contact );
         let title = document.createElement( "h2" );
         title.innerHTML = "List of contacts";
         contactDiv.appendChild( title );
         contactDiv.appendChild( table );
 
-        for( contact of contacts ) {
+        for( const contact of contacts ) {
             createContactRow( contact, table );
         }
 
@@ -100,19 +100,23 @@ function createContactTable( contact ) {
     let nameColumn = document.createElement( "th" );
     let addressColumn = document.createElement( "th" );
     let emailColumn = document.createElement( "th" );
+    let deleteColumn = document.createElement( "th" );
     nameColumn.innerHTML = "Name";
     addressColumn.innerHTML = "Address";
     emailColumn.innerHTML = "Email";
+    deleteColumn.innerHTML = "Delete row";
     row.appendChild( nameColumn );
     row.appendChild( addressColumn );
     row.appendChild( emailColumn );
+    row.appendChild( deleteColumn );
     let formRow = table.insertRow( 1 );
     let nameTh = document.createElement( "th" );
     let addressTh = document.createElement( "th" );
     let emailTh = document.createElement( "th" );
-    //let createTh = document.createElement( "th" );
+    let createTh = document.createElement( "th" );
+    let deleteTh = document.createElement( "th" );
     
-    let nameInput = document.createElement( "input" );
+    /*let nameInput = document.createElement( "input" );
     nameInput.setAttribute( "id", `name-input- ${contact.id}` );
     nameInput.setAttribute( "type", "text" );
     nameInput.setAttribute( "class", "form-control" );
@@ -124,14 +128,16 @@ function createContactTable( contact ) {
     emailInput.setAttribute( "id", `email-input- ${contact.id}` );
     emailInput.setAttribute( "type", "text" );
     emailInput.setAttribute( "class", "form-control" );
-    //let newContactButton = createNeweContactButton( contact );
+    let newContactButton = createNeweContactButton( contact );
     nameTh.appendChild( nameInput );
     addressTh.appendChild( adressInput );
     emailTh.appendChild( emailInput );
-    //createTh.appendChild( newContactButton );
+    createTh.appendChild( newContactButton );
+    */
     formRow.appendChild( nameTh );
     formRow.appendChild( addressTh );
     formRow.appendChild( emailTh );
+    formRow.appendChild( deleteTh );
     //formRow.appendChild( createTh );
     return table;
 }
