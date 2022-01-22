@@ -113,7 +113,6 @@ function createContactTable( contact ) {
     let nameTh = document.createElement( "th" );
     let addressTh = document.createElement( "th" );
     let emailTh = document.createElement( "th" );
-    let createTh = document.createElement( "th" );
     let deleteTh = document.createElement( "th" );
     
     formRow.appendChild( nameTh );
